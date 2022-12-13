@@ -23,9 +23,10 @@ public class MyWebElements extends Driver{
     }
 
     void searchxpath1() {
-        //locateElement.findElement(By.xpath("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]"));
-        WebElement locateElement1 =driver.findElement(By.xpath("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]"));
-        locateElement1.click();
+        locateElement=driver.findElement(By.xpath("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]"));
+        locateElement.click();
+        locateElement.click();
+
     }
     void searchxpathclass() {
         locateElement.findElement(By.className("a-size-medium a-color-base a-text-normal"));
@@ -37,9 +38,8 @@ public class MyWebElements extends Driver{
     void actionToPerform()
     {
         //WebElement button1=driver.findElement(By.xpath("//span[@class='a-button-text' and @id='submit.add-to-cart-announce']"));
-       WebElement button1=driver.findElement(By.xpath("//span[@class='a-declarative']//span[@id='submit.add-to-cart']"));
-
-        button1.click();
+        locateElement=driver.findElement(By.xpath("//span[@class='a-declarative']//span[@id='submit.add-to-cart']"));
+        locateElement.click();
        // Actions actions = new Actions(driver);
        // actions.doubleClick(button1);
     }
