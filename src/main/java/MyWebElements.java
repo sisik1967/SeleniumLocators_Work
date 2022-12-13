@@ -25,7 +25,6 @@ public class MyWebElements extends Driver{
     void searchxpath1() {
         locateElement=driver.findElement(By.xpath("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]"));
         locateElement.click();
-        locateElement.click();
 
     }
     void searchxpathclass() {
