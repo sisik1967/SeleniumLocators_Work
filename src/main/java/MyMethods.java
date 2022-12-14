@@ -13,9 +13,10 @@ public class MyMethods extends Driver{
     }
 
     // Locate WebElement search box in Amazon.com
-    void locateEl(String searchbox)
+    void locateEl(By element)
     {
-        locateElement =driver.findElement(By.id(searchbox));
+
+        locateElement =driver.findElement(element);
     }
 
     //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
@@ -27,12 +28,13 @@ public class MyMethods extends Driver{
     //Click Enter key to search the item
     void enterKey()
     {
+
         locateElement.sendKeys(Keys.ENTER);
     }
 
     //Locate the xpath link text to select the desired item
-    void loacateXpathLinkText(String xpathLinkText) {
-        locateElement=driver.findElement(By.xpath(xpathLinkText));
+    void loacateXpathLinkText(By element02) {
+        locateElement=driver.findElement(element02);
     }
 
     //Click the located item
@@ -41,19 +43,41 @@ public class MyMethods extends Driver{
     }
 
     //Find or locate Add to Cart button/link
-    void findAddToCartButton(String xpathLinkText)
+    void findAddToCartButton(By element03)
     {
-          locateElement=driver.findElement(By.xpath(xpathLinkText));
+          locateElement=driver.findElement(element03);
     }
 
     //***************************************************************************
     //** tried but unused methods and WebElements in the final version
-    void searchxpathclass() {
-        locateElement.findElement(By.className("a-size-medium a-color-base a-text-normal"));
+   /*
+   void searchxpathclass() {
+        locateElement.findElement(new MyElements().element04);
     }
     void searchxpath() {
-        locateElement.findElement(By.xpath("//span[@class='a-button-text' and @id='submit.add-to-cart-announce']"));
+        locateElement.findElement(new MyElements().element05);
     }
+    */
     //***************************************************************************
 
+    void findGoToChart(By element06)
+    {
+        locateElement=driver.findElement(element06);
+    }
+    void findProceedToCheckoutButton(By element07)
+    {
+        locateElement=driver.findElement(element07);
+    }
+    void findMailBox(By element08)
+    {
+        locateElement=driver.findElement(element08);
+    }
+    void findContinue(By element09)
+    {
+        locateElement=driver.findElement(element09);
+    }
+    void findPassword(By element10)
+    {
+        locateElement=driver.findElement(element10);
+    }
 }
