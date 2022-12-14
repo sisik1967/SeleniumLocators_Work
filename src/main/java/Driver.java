@@ -5,8 +5,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public abstract class Driver {
     public static WebDriver driver =new ChromeDriver();
-
-
     //public static WebDriver driver =new FirefoxDriver();
     //public static WebDriver driver =new EdgeDriver();
 }

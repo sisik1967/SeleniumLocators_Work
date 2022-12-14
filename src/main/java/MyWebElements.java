@@ -1,55 +1,53 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 public class MyWebElements extends Driver{
     public static WebElement locateElement;
 
-    void locateEl()
+
+    // Locate WebElement search box in Amazon.com
+    void locateEl(String searchbox)
     {
-        locateElement =driver.findElement(By.id("twotabsearchtextbox"));
+        locateElement =driver.findElement(By.id(searchbox));
     }
-    void searchElement()
+
+    //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
+    void searchElement(String searchItem)
     {
-        locateElement.sendKeys("16TB External Hard Drive SSD");//initializing
+        locateElement.sendKeys(searchItem);//initializing
     }
+
+    //Click Enter key to search the item
     void enterKey()
     {
         locateElement.sendKeys(Keys.ENTER);
     }
-    void searchpartialLinkText() {
-        locateElement.findElement(By.partialLinkText("16TB External Hard Drive"));
+
+    //Locate the xpath link text to select the desired item
+    void loacateXpathLinkText(String xpathLinkText) {
+        locateElement=driver.findElement(By.xpath(xpathLinkText));
     }
 
-    void searchxpath1() {
-        locateElement=driver.findElement(By.xpath("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]"));
-        locateElement.click();
-
+    //Click the located item
+    void clickLocatedItem() {
+         locateElement.click();
     }
+
+    //Find or locate Add to Cart button/link
+    void findAddToCartButton(String xpathLinkText)
+    {
+          locateElement=driver.findElement(By.xpath(xpathLinkText));
+    }
+
+    //***************************************************************************
+    //** tried but unused methods and WebElements in the final version
     void searchxpathclass() {
         locateElement.findElement(By.className("a-size-medium a-color-base a-text-normal"));
     }
-
     void searchxpath() {
         locateElement.findElement(By.xpath("//span[@class='a-button-text' and @id='submit.add-to-cart-announce']"));
     }
-    void actionToPerform()
-    {
-        //WebElement button1=driver.findElement(By.xpath("//span[@class='a-button-text' and @id='submit.add-to-cart-announce']"));
-        locateElement=driver.findElement(By.xpath("//span[@class='a-declarative']//span[@id='submit.add-to-cart']"));
-        locateElement.click();
-       // Actions actions = new Actions(driver);
-       // actions.doubleClick(button1);
-    }
-/*
-    launchBrowser("https://www.amazon.com");
-    //launchChrome(),
-    //goToURL("https://www.google.com/");
-    MyWebElements elementActions = new MyWebElements();
-        elementActions.locateEl();
-        elementActions.searchElement();
-        elementActions.enterKey();
+    //***************************************************************************
 
-    */
 }
