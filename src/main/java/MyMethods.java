@@ -1,50 +1,59 @@
-// This program automate:
-// (i)   to open a web browser (Chrome)
-// (ii)  to go to an online shopping website (Amazon.com)
-// (iii) to search an item (an external hard disk)
-// (iv)  to select the item
-// (v)   to add the item to the shopping cart
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 
-
-public class MyMethods extends MyWebElements {
-    public static void main(String[] args) throws InterruptedException {
-        //launch browser Chrome and go to amazon.com
-        launchBrowser(Constants.url);
-
-        //Define elementActions using MyWebElements class
-        MyWebElements elementActions = new MyWebElements();
-
-       // Locate WebElement search box in Amazon.com
-        elementActions.locateEl("twotabsearchtextbox");
-
-        //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
-        elementActions.searchElement("16TB External Hard Drive SSD");
-
-        //Click Enter key to search the item
-        elementActions.enterKey();
-
-
-        //Locate the xpath link text to select the desired item
-        elementActions.loacateXpathLinkText("//div[@data-asin='B0BPBZQZ65']//h2/a[contains(@class, 'a-link-normal')]");
-
-        //Click the located item to see the item
-        elementActions.clickLocatedItem();
-        Thread.sleep(1000);
-
-        //Find or locate Add to Cart button/link
-        elementActions.findAddToCartButton("//span[@class='a-declarative']//span[@id='submit.add-to-cart']");
-        Thread.sleep(1000);
-
-        //Click the located item to add the item to the shopping cart.
-        elementActions.clickLocatedItem();
-    }
-
+public class MyMethods extends Driver{
+    public static WebElement locateElement;
 
     //launch browser Chrome and go to amazon.com, then maximize the browser window.
-    private static void launchBrowser(String url)  {
+   void launchBrowser(String url)  {
         driver.get(url);
         driver.manage().window().maximize();
 
     }
+
+    // Locate WebElement search box in Amazon.com
+    void locateEl(String searchbox)
+    {
+        locateElement =driver.findElement(By.id(searchbox));
+    }
+
+    //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
+    void searchElement(String searchItem)
+    {
+        locateElement.sendKeys(searchItem);//initializing
+    }
+
+    //Click Enter key to search the item
+    void enterKey()
+    {
+        locateElement.sendKeys(Keys.ENTER);
+    }
+
+    //Locate the xpath link text to select the desired item
+    void loacateXpathLinkText(String xpathLinkText) {
+        locateElement=driver.findElement(By.xpath(xpathLinkText));
+    }
+
+    //Click the located item
+    void clickLocatedItem() {
+         locateElement.click();
+    }
+
+    //Find or locate Add to Cart button/link
+    void findAddToCartButton(String xpathLinkText)
+    {
+          locateElement=driver.findElement(By.xpath(xpathLinkText));
+    }
+
+    //***************************************************************************
+    //** tried but unused methods and WebElements in the final version
+    void searchxpathclass() {
+        locateElement.findElement(By.className("a-size-medium a-color-base a-text-normal"));
+    }
+    void searchxpath() {
+        locateElement.findElement(By.xpath("//span[@class='a-button-text' and @id='submit.add-to-cart-announce']"));
+    }
+    //***************************************************************************
 
 }
