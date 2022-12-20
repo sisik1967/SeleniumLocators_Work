@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
+import static org.openqa.selenium.support.locators.RelativeLocator.with;
+
 public class MyMethods extends Driver{
     public static WebElement locateElement;
 
@@ -20,7 +22,7 @@ public class MyMethods extends Driver{
     }
 
     //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
-    void searchElement(String searchItem)
+    void sendElement(String searchItem)
     {
         locateElement.sendKeys(searchItem);//initializing
     }
@@ -35,6 +37,7 @@ public class MyMethods extends Driver{
     //Locate the xpath link text to select the desired item
     void loacateXpathLinkText(By element02) {
         locateElement=driver.findElement(element02);
+        //locateElement.click();
     }
 
     //Click the located item
