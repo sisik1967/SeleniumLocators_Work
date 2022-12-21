@@ -27,18 +27,18 @@ public class MyElements extends Driver{
 
 
         //public By element021=By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[2]/div/div/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span");
-        public By element021=By.xpath("//*[@id=\"search\"]/div[1]/div[1]/div/span[1]/div[1]/div[11]/div/div/div/div/div/div/div/div[2]/div/div/div/h2/a");
+        public By element021=By.xpath("//*[@id='search']/div/div/div/span/div/div[2]/div/div/div/div/div/div[2]/div/div/div/h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']/a");
 
         //*[@id="search"]/div[1]/div[1]/div/span[1]/div[1]/div[11]/div/div/div/div
        // public By element022=By.xpath("//*[@id='search']/div[1]/div[1]/div/span[1]/div[1]/div[5]/div/div/div/div/div/div[2]/div/div/div[1]/h2/a/span");
-        public By element022=By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2'])[7]/a");
-        public By element023=By.partialLinkText("16TB External Hard Drive SSD");
+        public By element022=By.xpath("(//h2[@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2'])[1]/a");
+        public By element023=By.partialLinkText("Amazon Fire HD 10 tablet, 10.1");
 
         // public By element024=By.linkText("16TB External Hard Drive SSD，Portable External Solid State Drive 16TB-Reading Speeds up to 500Mb/s，USB 3.1 Type C SSD Compatible with Desktops,Laptops,PC, XS Windows-Black");//link değişince hata veriyor yaklaşık çalışma süresi 15 dk
-        public By element024=By.linkText("16TB External Hard Drive SSD，Portable External Solid State Drive,Black.Reading Speeds up to 500Mb/s，USB 3.1 Type C SSD Compatible with Desktops,Laptops,PC, XS Windows");//link değişince hata veriyor yaklaşık çalışma süresi 15 dk
+        public By element024=By.linkText("Amazon Fire HD 10 tablet, 10.1\", 1080p Full HD, 32 GB, latest model (2021 release), Olive");//link değişince hata veriyor yaklaşık çalışma süresi 15 dk
 
       //    public By element025=By.xpath("(//h2)[1]");
-        public By element025=By.xpath("(//h2)[1][@class='a-size-mini a-spacing-none a-color-base s-line-clamp-2']/a");
+        public By element025=By.xpath("//*[@id='search']/div/div/div/span/div/div[2]/div/div/div/div/div/div[2]/div/div/div/h2/a");
 
 
 
@@ -60,7 +60,7 @@ value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce">
  */
 
  //       public By element061=By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div[1]/form/span/span/span/input");
-        public By element061=By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div[3]/div/div/form");
+        public By element061=By.xpath("/html/body/div[1]/div[2]/div/div[1]/div[2]/div/div[3]/div/div/form/span/span/span/input");
 
 
         public By element062=By.name("proceedToRetailCheckout");
@@ -85,7 +85,7 @@ value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce">
         public By element092=By.xpath("//span[@id='continue']");
         public By element093=By.cssSelector("input[aria-labelledby='continue-announce'");
         public By element094=with(By.id("continue")).below(element081);
-        public By element095=with(By.className("a-button-text")).below(element085);
+        public By element095=By.cssSelector("input[type='submit']");
 
 
         /*
@@ -94,13 +94,13 @@ value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce">
         ↓↓↓↓ */
         public By element101=By.cssSelector("input#ap_password");
         public By element102=By.xpath("//div/div/div/div/div/div/form/div/div[1]/input");
-        public By element103=By.tagName("Password");
+        public By element103=By.xpath("//form/div/div[1]/input");
         public By element104=By.xpath("//div/div/div/div/div/div/form/div/div[1]/input[@id='ap_password']");
         public By element105=By.id("ap_password");
 
         public By element111=By.cssSelector("input.a-button-input[type='submit'][aria-labelledby='auth-signin-button-announce']");
         public By element112=By.xpath("//div/div/div/div/div/div/form/div/div[2]/span/span/input[@id='signInSubmit']");
-        public By element113=By.tagName("Sign in");
+        public By element113=By.xpath("//span/span/input[@id='signInSubmit']");
         public By element114=By.className("a-button-input");
         public By element115=By.id("signInSubmit");
 }

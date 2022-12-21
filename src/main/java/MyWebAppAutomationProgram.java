@@ -28,11 +28,11 @@ public class MyWebAppAutomationProgram extends MyMethods {
         elementActions.locateEl(elements.element013);
         elementActions.locateEl(elements.element014);
         elementActions.locateEl(elements.element015);
-        elementActions.locateEl(elements.element016);
-       // elementActions.locateEl(elements.element017);
-       // elementActions.locateEl(elements.element018);
+//        elementActions.locateEl(elements.element016);
+//        elementActions.locateEl(elements.element017);
+//        elementActions.locateEl(elements.element018);
 
-        //Send searchItem (16TB External Hard Drive SSD) to Search Box in Amazon.com
+        //Send searchItem (Amazon kindle fire hd10) to Search Box in Amazon.com
         elementActions.sendElement(obje.SEARCHITEM);
 
         //Click Enter key to search the item
@@ -62,7 +62,7 @@ public class MyWebAppAutomationProgram extends MyMethods {
 
         //Click the located item to add the item to the shopping cart.
         elementActions.clickLocatedItem();
-        Thread.sleep(2000);
+        Thread.sleep(3000);
 
        //Find or locate Proceed To Checkout Button
         elementActions.findGoToChart(elements.element061);
@@ -81,7 +81,7 @@ public class MyWebAppAutomationProgram extends MyMethods {
         elementActions.findMailBox(elements.element082);
         elementActions.findMailBox(elements.element083);
         elementActions.findMailBox(elements.element084);
-        elementActions.findMailBox(elements.element085);
+//        elementActions.findMailBox(elements.element085);
 
 
         //Send Email from Constants
@@ -111,6 +111,8 @@ public class MyWebAppAutomationProgram extends MyMethods {
         elementActions.findPassword(elements.element113);
         elementActions.findPassword(elements.element114);
         elementActions.findPassword(elements.element115);
+        elementActions.clickLocatedItem();
+
     }
 
 }
