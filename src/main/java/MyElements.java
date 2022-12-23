@@ -54,6 +54,8 @@ public class MyElements extends Driver{
 
         public By element035=By.xpath("(//input[@type='submit'])[2]");
 
+
+        public By element050=By.cssSelector("span[class='a-button a-button-base abb-intl-decline']");
 /*
 <input name="proceedToRetailCheckout" data-feature-id="proceed-to-checkout-action" class="a-button-input" type="submit"
 value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce">
@@ -69,6 +71,8 @@ value="Proceed to checkout" aria-labelledby="sc-buy-box-ptc-button-announce">
 
         public By element064=By.xpath("//input[@value='Proceed to checkout']");
         public By element065=By.xpath("//*[@id=\"sc-buy-box-ptc-button\"]/span/input");
+
+
 
 
         /*

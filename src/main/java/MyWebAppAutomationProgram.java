@@ -21,7 +21,7 @@ public class MyWebAppAutomationProgram extends MyMethods {
 
         //launch browser Chrome and go to amazon.com
         elementActions.launchBrowser(obje.URL);
-
+        Thread.sleep(2000);
        // Locate WebElement search box in Amazon.com
         elementActions.locateEl(elements.element011);
         elementActions.locateEl(elements.element012);
@@ -59,10 +59,14 @@ public class MyWebAppAutomationProgram extends MyMethods {
         elementActions.findAddToCartButton(elements.element034);
         elementActions.findAddToCartButton(elements.element035);
 
-
         //Click the located item to add the item to the shopping cart.
         elementActions.clickLocatedItem();
-        Thread.sleep(3000);
+        Thread.sleep(2000);
+
+        //Close popup windows
+        elementActions.findAddToCartButton(elements.element050);
+        elementActions.clickLocatedItem();
+        Thread.sleep(2000);
 
        //Find or locate Proceed To Checkout Button
         elementActions.findGoToChart(elements.element061);
@@ -95,7 +99,7 @@ public class MyWebAppAutomationProgram extends MyMethods {
         elementActions.findContinue(elements.element095);
         //Click the located item
         elementActions.clickLocatedItem();
-
+        Thread.sleep(1000);
         //Find or locate password
         elementActions.findPassword(elements.element101);
         elementActions.findPassword(elements.element102);
